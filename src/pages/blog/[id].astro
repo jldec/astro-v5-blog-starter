@@ -21,6 +21,7 @@ const { Content } = await render(post);
   <Image src={post.data.image} alt={post.data.title} class="w-full h-60 object-cover object-bottom" />
   <article class="prose mx-auto p-4">
     <h1>{post.data.title}</h1>
+    <a href="/">&lt;&lt; Back</a>
     <Content />
   </article>
 </Layout>

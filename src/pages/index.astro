@@ -4,12 +4,29 @@ import Layout from '../layouts/Layout.astro';
 
 import { Image } from 'astro:assets';
 import shadow from '../assets/shadow.jpg';
+
+import { getCollection } from 'astro:content';
+const blogPosts = await getCollection('blog');
 ---
 
 <Layout>
-  <div class="prose mx-auto">
+  <div class="prose mx-auto p-2">
     <Welcome />
-    <a href="/blog/first-post">first post</a> 😀
-    <Image src={shadow} alt="shadow" class="max-w-md" />
+    <div class="post-list grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {
+        blogPosts.map((post) => (
+          <a href={`/blog/${post.id}`} class="relative group hover:-translate-y-1 transition-transform">
+            <Image
+              src={post.data.image}
+              alt={post.data.title}
+              class="w-full h-60 object-cover object-bottom m-0 rounded-md shadow-lg"
+            />
+            <div class="absolute inset-0 p-1 text-3xl text-white items-center justify-center flex rounded-md bg-slate-800/10 hover:bg-slate-800/50 transition-all duration-200">  
+              {post.data.title}
+            </div>
+          </a>
+        ))
+      }
+    </div>
   </div>
 </Layout>
