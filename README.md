@@ -4,9 +4,9 @@ https://astro-v5-blog-starter.pages.dev/
 ![Screenshot 2024-12-27 at 22 26 06](https://github.com/user-attachments/assets/37de9c8c-4a82-437b-8682-92a6eeb7e382)
 
 ## Includes
-- Blog with Markdown support
-- Tailwind CSS
 - Image optimization with `<Image>`
+- Tailwind CSS
+- Blog authoring with Markdown
 
 ## 🚀 Project Structure
 ```text
