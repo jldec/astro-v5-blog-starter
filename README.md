@@ -14,6 +14,8 @@ https://astro-v5-blog-starter.pages.dev/
 ├── astro.config.mjs
 ├── package.json
 ├── public
+│   ├── _headers
+│   ├── _redirects
 │   └── favicon.svg
 ├── src
 │   ├── assets
@@ -37,7 +39,8 @@ https://astro-v5-blog-starter.pages.dev/
 │   └── styles
 │       └── global.css
 ├── tailwind.config.mjs
-└── tsconfig.json
+├── tsconfig.json
+└── wrangler.toml
 ```
 
 ## 🧞 Command
