@@ -14,18 +14,26 @@ const blogPosts = await getCollection('blog');
     <div class="post-list grid grid-cols-1 sm:grid-cols-2 gap-4">
       {
         blogPosts.map((post) => (
-          <a href={`/blog/${post.id}`} class="relative group hover:-translate-y-1 transition-transform">
+          <a
+            href={`/blog/${post.id}`}
+            class="relative group hover:-translate-y-1 transition-transform"
+          >
             <Image
               src={post.data.image}
               alt={post.data.title}
               class="w-full h-60 object-cover object-bottom m-0 rounded-md shadow-lg"
             />
-            <div class="absolute inset-0 p-1 text-3xl text-white items-center justify-center flex rounded-md bg-slate-800/10 hover:bg-slate-800/50 transition-all duration-200">  
+            <div class="absolute inset-0 p-1 text-3xl text-white items-center justify-center flex rounded-md bg-slate-800/10 hover:bg-slate-800/50 transition-all duration-200">
               {post.data.title}
             </div>
           </a>
         ))
       }
     </div>
+    <p class="mt-12">
+      <a href="https://github.com/jldec/astro-v5-blog-starter"
+        >https://github.com/jldec/astro-v5-blog-starter</a
+      >
+    </p>
   </div>
 </Layout>
