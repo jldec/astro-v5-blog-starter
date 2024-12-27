@@ -1,4 +1,9 @@
-# Minimal Astro v5 Blog starter with Tailwind and `<Image>` optimization
+# Minimal Astro v5 Blog starter
+Includes:
+
+- Blog with Markdown support
+- Tailwind CSS
+- Image optimization with `<Image>`
 
 ## 🚀 Project Structure
 ```text
