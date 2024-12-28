@@ -1,6 +1,8 @@
 ---
+date: "2024-12-01"
 title: "My First Blog Post"
-image: "../images/birch-trees.webp"
+image:
+  src: "../images/birch-trees.webp"
 ---
 ## Markdown is
 - a lightweight markup language

@@ -1,11 +1,13 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
 import { Image } from 'astro:assets';
-
 import { getCollection } from 'astro:content';
-const blogPosts = await getCollection('blog');
+import { filterAllPosts, sortPostsByDate } from '~/content.config';
+import Layout from '~/layouts/Layout.astro';
+import Welcome from '~/components/Welcome.astro';
+
+const blogPosts = (await getCollection('blog', filterAllPosts)).sort(
+  sortPostsByDate
+);
 ---
 
 <Layout>
@@ -16,14 +18,14 @@ const blogPosts = await getCollection('blog');
         blogPosts.map((post) => (
           <a
             href={`/blog/${post.id}`}
-            class="relative group hover:-translate-y-1 transition-transform"
+            class="relative"
           >
             <Image
-              src={post.data.image}
-              alt={post.data.title}
+              src={post.data.image.src}
+              alt={post.data.image.alt || ''}
               class="w-full h-60 object-cover object-bottom m-0 rounded-md shadow-lg"
             />
-            <div class="absolute inset-0 p-1 text-3xl text-white items-center justify-center flex rounded-md bg-slate-800/10 hover:bg-slate-800/50 transition-all duration-200">
+            <div class="absolute inset-0 flex items-center justify-center rounded-md p-1 text-3xl text-white bg-slate-800/10 hover:bg-slate-800/50 transition-all duration-200">
               {post.data.title}
             </div>
           </a>

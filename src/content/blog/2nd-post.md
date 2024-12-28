@@ -1,11 +1,15 @@
 ---
+date: "2024-12-02"
 title: "My Second Blog Post"
-image: "../images/sunset-cambridge.jpg"
+image:
+  src: "../images/sunset-cambridge.jpg"
 ---
 
 ```yaml
 ---
+date: "2024-12-02"
 title: "My Second Blog Post"
-image: "../images/sunset-cambridge.jpg"
+image:
+  src: "../images/sunset-cambridge.jpg"
 ---
 ```

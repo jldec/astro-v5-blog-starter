@@ -3,10 +3,11 @@
 // https://docs.astro.build/en/guides/images/#images-in-content-collections
 import { Image } from 'astro:assets';
 import { getCollection, render } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
+import { filterAllPosts } from '~/content.config';
+import Layout from '~/layouts/Layout.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = await getCollection('blog', filterAllPosts);
   return posts.map((post) => ({
     params: { id: post.id },
     props: { post },
@@ -18,7 +19,11 @@ const { Content } = await render(post);
 ---
 
 <Layout title={post.data.title}>
-  <Image src={post.data.image} alt={post.data.title} class="w-full h-60 object-cover object-bottom" />
+  <Image
+    src={post.data.image.src}
+    alt={post.data.image.alt || ''}
+    class="w-full h-60 object-cover object-bottom"
+  />
   <article class="prose mx-auto p-4">
     <h1>{post.data.title}</h1>
     <a href="/">&lt;&lt; Back</a>
