@@ -1,7 +1,8 @@
 # Minimal Astro v5 Blog starter
-https://astro-v5-blog-starter.pages.dev/
-
-![Screenshot 2024-12-27 at 22 26 06](https://github.com/user-attachments/assets/37de9c8c-4a82-437b-8682-92a6eeb7e382)
+- blog writeup https://jldec.me/blog/astro-v5-blog-starter
+- preview https://astro-v5-blog-starter.pages.dev/
+- screenshot
+  ![Screenshot 2024-12-27 at 22 26 06](https://github.com/user-attachments/assets/37de9c8c-4a82-437b-8682-92a6eeb7e382)
 
 ## Includes
 - Image optimization with `<Image>`
