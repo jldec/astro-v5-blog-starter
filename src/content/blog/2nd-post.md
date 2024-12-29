@@ -7,7 +7,7 @@ image:
 
 I don't really have a second blog post yet, but I wanted 2 posts in [index.md](/).
 
-### OG
+### src/content/blog/2nd-post.md
 
 ```markdown
 ---
