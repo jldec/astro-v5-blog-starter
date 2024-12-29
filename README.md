@@ -4,12 +4,12 @@
 - screenshot
   ![Screenshot 2024-12-27 at 22 26 06](https://github.com/user-attachments/assets/37de9c8c-4a82-437b-8682-92a6eeb7e382)
 
-## Includes
+### Features
 - Image optimization with `<Image>`
 - Tailwind CSS
 - Blog authoring with Markdown
 
-## 🚀 Project Structure
+### Files
 ```text
 ├── README.md
 ├── astro.config.mjs
@@ -44,7 +44,7 @@
 └── wrangler.toml
 ```
 
-## 🧞 Command
+### Usage
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `pnpm install`            | Installs dependencies                            |
@@ -52,5 +52,6 @@
 | `pnpm build`              | Build your production site to `./dist/`          |
 | `pnpm preview`            | Preview your build locally, before deploying     |
 
-## 👀 Want to learn more?
-Read the [Astro docs](https://docs.astro.build) or jump into the [Astro Discord](https://astro.build/chat).
+## To learn more
+- [Astro docs](https://docs.astro.build) | [Astro Discord](https://astro.build/chat).
+- [Cloudflare Pages docs](https://developers.cloudflare.com/pages/get-started/git-integration/) | [Cloudflare Discord](https://discord.cloudflare.com/)
