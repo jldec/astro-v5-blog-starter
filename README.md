@@ -52,6 +52,6 @@
 | `pnpm build`              | Build your production site to `./dist/`          |
 | `pnpm preview`            | Preview your build locally, before deploying     |
 
-## To learn more
+### To learn more
 - [Astro docs](https://docs.astro.build) | [Astro Discord](https://astro.build/chat).
 - [Cloudflare Pages docs](https://developers.cloudflare.com/pages/get-started/git-integration/) | [Cloudflare Discord](https://discord.cloudflare.com/)
