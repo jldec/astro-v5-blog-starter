@@ -55,3 +55,7 @@
 ### To learn more
 - [Astro docs](https://docs.astro.build) | [Astro Discord](https://astro.build/chat).
 - [Cloudflare Pages docs](https://developers.cloudflare.com/pages/get-started/git-integration/) | [Cloudflare Discord](https://discord.cloudflare.com/)
+
+---
+Copyright (c) 2024-present, Jürgen Leschner (@jldec)
+MIT License
