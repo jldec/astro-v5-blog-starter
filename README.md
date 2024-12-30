@@ -1,6 +1,6 @@
 # Minimal Astro v5 Blog starter
 - blog writeup https://jldec.me/blog/astro-v5-blog-starter
-- preview https://astro-v5-blog-starter.pages.dev/
+- preview https://astro-v5-blog-starter.jldec.me/
 - screenshot
   ![Screenshot 2024-12-27 at 22 26 06](https://github.com/user-attachments/assets/37de9c8c-4a82-437b-8682-92a6eeb7e382)
 
@@ -51,6 +51,17 @@
 | `pnpm dev`                | Starts local dev server at `localhost:4321`      |
 | `pnpm build`              | Build your production site to `./dist/`          |
 | `pnpm preview`            | Preview your build locally, before deploying     |
+
+
+### Deploy to Cloudflare Pages
+Cloudflare Pages will auto-build and republish on every commit if you [link to your git repo](https://developers.cloudflare.com/pages/get-started/git-integration/).
+
+Alternatively, you can push builds directly from your local machine using Wrangler.
+- Modify the name in `wrangler.toml` to suit your project
+- `pnpm wrangler login` - authenticates with Cloudflare (one time)
+- `pnpm ship` - runs astro build && wrangler pages deploy
+
+Set the site name in `astro.config` to generate canonical URLs.
 
 ### To learn more
 - [Astro docs](https://docs.astro.build) | [Astro Discord](https://astro.build/chat).

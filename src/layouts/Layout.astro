@@ -4,9 +4,7 @@ import '~/styles/global.css';
 type Props = {
   title?: string;
 };
-
-const { title = 'Minimal Astro starter with tailwind and blog content' } =
-  Astro.props;
+const { title = 'Astro v5 blog starter' } = Astro.props;
 ---
 
 <!doctype html>
@@ -15,6 +13,11 @@ const { title = 'Minimal Astro starter with tailwind and blog content' } =
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {
+      Astro.site && (
+        <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+      )
+    }
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
