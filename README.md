@@ -12,18 +12,18 @@
 
 ### Files
 ```text
+├── LICENSE
 ├── README.md
 ├── astro.config.mjs
 ├── package.json
 ├── public
 │   ├── _headers
-│   ├── _redirects
 │   └── favicon.svg
 ├── src
 │   ├── assets
 │   │   └── astro.svg
 │   ├── components
-│   │   └── Welcome.astro
+│   │   └── AstroLogo.astro
 │   ├── content
 │   │   ├── blog
 │   │   │   ├── 2nd-post.md
@@ -35,6 +35,7 @@
 │   ├── layouts
 │   │   └── Layout.astro
 │   ├── pages
+│   │   ├── 404.astro
 │   │   ├── blog
 │   │   │   └── [id].astro
 │   │   └── index.astro
