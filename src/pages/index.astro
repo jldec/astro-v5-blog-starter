@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import { filterAllPosts, sortPostsByDate } from '~/content.config';
 import Layout from '~/layouts/Layout.astro';
-import Welcome from '~/components/Welcome.astro';
+import AstroLogo from '~/components/AstroLogo.astro';
 
 const blogPosts = (await getCollection('blog', filterAllPosts)).sort(
   sortPostsByDate
@@ -11,8 +11,8 @@ const blogPosts = (await getCollection('blog', filterAllPosts)).sort(
 ---
 
 <Layout>
-  <div class="prose mx-auto p-2">
-    <Welcome />
+  <AstroLogo />
+  <main class="prose mx-auto p-2">
     <div class="post-list grid grid-cols-1 sm:grid-cols-2 gap-4">
       {
         blogPosts.map((post) => (
@@ -37,5 +37,5 @@ const blogPosts = (await getCollection('blog', filterAllPosts)).sort(
         >https://github.com/jldec/astro-v5-blog-starter</a
       >
     </p>
-  </div>
+  </main>
 </Layout>
