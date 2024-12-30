@@ -62,7 +62,8 @@ Alternatively, you can push builds directly from your local machine using Wrangl
 - `pnpm wrangler login` - authenticates with Cloudflare (one time)
 - `pnpm ship` - runs astro build && wrangler pages deploy
 
-Set the site name in `astro.config` to generate canonical URLs.
+> [!TIP]
+> Set the site name in `astro.config` to generate canonical URLs.
 
 ### To learn more
 - [Astro docs](https://docs.astro.build) | [Astro Discord](https://astro.build/chat).
