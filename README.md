@@ -2,7 +2,8 @@
 - blog writeup https://jldec.me/blog/astro-v5-blog-starter
 - preview https://astro-v5-blog-starter.jldec.me/
 - screenshot
-  ![Screenshot 2024-12-27 at 22 26 06](https://github.com/user-attachments/assets/37de9c8c-4a82-437b-8682-92a6eeb7e382)
+  ![Screenshot 2024-12-30 at 13 39 09](https://github.com/user-attachments/assets/a805e393-0b1c-4755-bb8a-1a321ffeed82)
+
 
 ### Features
 - Image optimization with `<Image>`
