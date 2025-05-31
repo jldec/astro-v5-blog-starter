@@ -41,7 +41,6 @@
 │   │   └── index.astro
 │   └── styles
 │       └── global.css
-├── tailwind.config.mjs
 ├── tsconfig.json
 └── wrangler.toml
 ```
