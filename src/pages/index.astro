@@ -12,7 +12,7 @@ const blogPosts = (await getCollection('blog', filterAllPosts)).sort(
 
 <Layout>
   <AstroLogo />
-  <main class="prose mx-auto p-2">
+  <main class="prose mx-auto p-2 prose-li:my-0.5 prose-img:my-0 prose-img:rounded-md prose-img:shadow-lg">
     <div class="post-list grid grid-cols-1 sm:grid-cols-2 gap-4">
       {
         blogPosts.map((post) => (
