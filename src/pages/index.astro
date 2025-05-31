@@ -1,25 +1,21 @@
 ---
-import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
-import { filterAllPosts, sortPostsByDate } from '~/content.config';
-import Layout from '~/layouts/Layout.astro';
-import AstroLogo from '~/components/AstroLogo.astro';
+import { Image } from 'astro:assets'
+import { getCollection } from 'astro:content'
+import { filterAllPosts, sortPostsByDate } from '~/content.config'
+import Layout from '~/layouts/Layout.astro'
+import AstroLogo from '~/components/AstroLogo.astro'
+import Prose from '~/components/Prose.astro'
 
-const blogPosts = (await getCollection('blog', filterAllPosts)).sort(
-  sortPostsByDate
-);
+const blogPosts = (await getCollection('blog', filterAllPosts)).sort(sortPostsByDate)
 ---
 
 <Layout>
   <AstroLogo />
-  <main class="prose mx-auto p-2 prose-li:my-0.5 prose-img:my-0 prose-img:rounded-md prose-img:shadow-lg">
-    <div class="post-list grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <Prose>
+    <main class="p-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
       {
         blogPosts.map((post) => (
-          <a
-            href={`/blog/${post.id}`}
-            class="relative"
-          >
+          <a href={`/blog/${post.id}`} class="relative">
             <Image
               src={post.data.image.src}
               alt={post.data.image.alt || ''}
@@ -31,11 +27,9 @@ const blogPosts = (await getCollection('blog', filterAllPosts)).sort(
           </a>
         ))
       }
-    </div>
-    <p class="mt-12">
-      <a href="https://github.com/jldec/astro-v5-blog-starter"
-        >https://github.com/jldec/astro-v5-blog-starter</a
-      >
+    </main>
+    <p class="mt-8 text-center">
+      <a href="https://github.com/jldec/astro-v5-blog-starter">https://github.com/jldec/astro-v5-blog-starter</a>
     </p>
-  </main>
+  </Prose>
 </Layout>

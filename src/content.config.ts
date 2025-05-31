@@ -1,5 +1,5 @@
-import { glob } from 'astro/loaders';
-import { defineCollection, z, type CollectionEntry } from 'astro:content';
+import { glob } from 'astro/loaders'
+import { defineCollection, z, type CollectionEntry } from 'astro:content'
 
 const blog = defineCollection({
   loader: glob({
@@ -16,26 +16,20 @@ const blog = defineCollection({
         alt: z.string().nullable().optional(),
       }),
     }),
-});
+})
 
-export const collections = { blog };
+export const collections = { blog }
 
-const isDev = import.meta.env.DEV;
+const isDev = import.meta.env.DEV
 
-export const sortPostsByDate = (
-  a: CollectionEntry<'blog'>,
-  b: CollectionEntry<'blog'>
-) => {
-  return a.data.date.valueOf() - b.data.date.valueOf();
-};
+export const sortPostsByDate = (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) => {
+  return a.data.date.valueOf() - b.data.date.valueOf()
+}
 
-export const sortPostsByDateReverse = (
-  a: CollectionEntry<'blog'>,
-  b: CollectionEntry<'blog'>
-) => {
-  return b.data.date.valueOf() - a.data.date.valueOf();
-};
+export const sortPostsByDateReverse = (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) => {
+  return b.data.date.valueOf() - a.data.date.valueOf()
+}
 
 export const filterAllPosts = (post: CollectionEntry<'blog'>) => {
-  return !post.data.draft || isDev;
-};
+  return !post.data.draft || isDev
+}
